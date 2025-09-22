@@ -66,12 +66,14 @@ RUN . /root/ros2_ws/install/setup.sh \
 && colcon build --packages-select velodyne_description \
 && . /root/ros2_ws/install/setup.sh \
 && colcon build --symlink-install \
-&& echo 'export GAZEBO_PLUGIN_PATH=$HOME/gazebo_paths_ws/install/lib:$GAZEBO_PLUGIN_PATH' >> ~/.bashrc \
 && echo 'export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:\
 $(ros2 pkg prefix electric_wheelchair)/share/electric_wheelchair/models:\
 $(ros2 pkg prefix create_world)/share/create_world/models:\
 $(ros2 pkg prefix gazebo_sfm_plugin)/share/gazebo_sfm_plugin/media/models' >> ~/.bashrc \
 && echo 'export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH' >> ~/.bashrc \
-&& echo 'export ROS_DOMAIN_ID=0' >> ~/.bashrc 
+&& echo 'export ROS_DOMAIN_ID=11' >> ~/.bashrc \
+&& echo 'export FASTDDS_BUILTIN_TRANSPORTS=UDPv4' >> ~/.bashrc \
+&& echo 'export ROS_LOCALHOST_ONLY=1' >> ~/.bashrc \
+&& echo 'export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp' >> ~/.bashrc
 
 CMD ["/bin/bash"]
