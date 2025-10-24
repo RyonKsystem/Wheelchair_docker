@@ -56,7 +56,7 @@ RUN cd ~/ \
 && sudo make install \
 && sudo apt install ros-humble-diagnostic-updater \
 && sudo apt update \
-&& sudo apt install libpcap-dev -y \
+&& sudo apt install libpcap-dev ros-humble-rmw-cyclonedds-cpp -y \
 && echo 'source ~/ros2_ws/install/setup.bash' >> ~/.bashrc 
 
 #colcon build
