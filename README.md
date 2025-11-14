@@ -1,6 +1,9 @@
 ※車椅子班用のパッケージです．
 
+# 動作環境
+OS: Ubuntu 22.04 or Ubuntu24.04
 事前にnvidia graphics driver, docker engine, vscode, nvidia docker container toolkitをインストールする．
+必要なROS2のsrcファイルを各自研究室のリポジトリの内からダウンロードしてください．
 
 # 導入手順
 1. Docker fileに必要なsrcファイルをNASから取得し，Dockerfile内に追加してください．
@@ -19,3 +22,6 @@
 ```
 ~$ ros2 launch connection_wheelchair connection_wheelchair.launch.py
 ```
+
+# 更新予定
+Gazebo/ROS環境内で必要な機能があれば適宜相談
