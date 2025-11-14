@@ -1,8 +1,10 @@
 ※車椅子班用のパッケージです．
 
 # 動作環境
-OS: Ubuntu 22.04 or Ubuntu24.04
+OS: Ubuntu 22.04 or Ubuntu24.04 
+
 事前にnvidia graphics driver, docker engine, vscode, nvidia docker container toolkitをインストールする．
+
 必要なROS2のsrcファイルを各自研究室のリポジトリの内からダウンロードしてください．
 
 # 導入手順
