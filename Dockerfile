@@ -73,7 +73,7 @@ $(ros2 pkg prefix gazebo_sfm_plugin)/share/gazebo_sfm_plugin/media/models' >> ~/
 && echo 'export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH' >> ~/.bashrc \
 && echo 'export ROS_DOMAIN_ID=11' >> ~/.bashrc \
 && echo 'export FASTDDS_BUILTIN_TRANSPORTS=UDPv4' >> ~/.bashrc \
-&& echo 'export ROS_LOCALHOST_ONLY=1' >> ~/.bashrc \
-&& echo 'export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp' >> ~/.bashrc
+&& echo 'export ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST' >> ~/.bashrc \
+&& echo 'export RMW_IMPLEMENTATION=rmw_fastrtps_cpp' >> ~/.bashrc
 
 CMD ["/bin/bash"]
